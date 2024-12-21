@@ -1,6 +1,5 @@
 ---
-title: "example2"
-genre: "サウナ"
+title: "example"
 ---
 
 # こんにちは、世界！

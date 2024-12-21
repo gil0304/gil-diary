@@ -1,6 +1,5 @@
 ---
-title: "example"
-genre: "ドラえもん"
+title: "example2"
 ---
 
 # こんにちは、世界！
