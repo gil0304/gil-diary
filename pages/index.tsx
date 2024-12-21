@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import HomeStyles from "@/styles/Home.module.css";
 
 type Article = { title: string; slug: string; genre: string };
 
@@ -9,21 +10,22 @@ const Home = ({
 }: {
   groupedArticles: { [genre: string]: Article[] };
 }) => (
-  <div
-    style={{ display: "flex", justifyContent: "space-between", gap: "2rem" }}
-  >
-    {Object.entries(groupedArticles).map(([genre, articles]) => (
-      <div key={genre} style={{ flex: 1 }}>
-        <h2>{genre}</h2>
-        <ul>
-          {articles.map(({ title, slug }) => (
-            <li key={slug}>
-              <a href={`/article/${slug}`}>{title}</a>
-            </li>
-          ))}
-        </ul>
-      </div>
-    ))}
+  <div className={HomeStyles.main}>
+    <h1>ぎる日記</h1>
+    <div className={HomeStyles["article-container"]}>
+      {Object.entries(groupedArticles).map(([genre, articles]) => (
+        <div key={genre} className={HomeStyles["article-list"]}>
+          <h2>{genre}</h2>
+          <ul>
+            {articles.map(({ title, slug }) => (
+              <li key={slug}>
+                <a href={`/article/${slug}`}>{title}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
   </div>
 );
 
