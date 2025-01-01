@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@100..900&display=swap');
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f7f7f7; /* 優しい背景色 */
+  min-height: 100vh;
+
+  h1 {
+    text-align: center;
+    font-size: 48px;
+    font-family: "M PLUS 1", serif;
+    font-weight: bold;
+    margin: 50px 0 30px;
+    color: #333;
+  }
+}
+
+.article-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+.article-list {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  h2 {
+    font-size: 24px;
+    color: #555;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 10px;
+
+      a {
+        text-decoration: none;
+        color: #0070f3;
+        font-weight: 500;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: #005bb5;
+        }
+      }
+    }
+  }
+}

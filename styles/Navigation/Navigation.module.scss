@@ -1,0 +1,61 @@
+.nav {
+  width: 20%; /* ナビゲーションの幅 */
+  background-color: #ffffff;
+  border-right: 1px solid #ddd;
+  padding: 20px;
+  position: fixed; /* 固定 */
+  top: 0; /* ビューポートの上に固定 */
+  left: 0; /* ビューポートの左に固定 */
+  height: 100vh; /* ビューポート全体の高さ */
+  overflow-y: auto; /* コンテンツが多い場合にスクロールを許可 */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+
+  &-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    h2 {
+      margin-bottom: 40px;
+    }
+  }
+
+  &-genre {
+    margin-bottom: 20px;
+
+    &-title {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #333;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
+    }
+
+    &-sublist {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      &-item {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #0070f3; /* 通常時の青色 */
+  font-weight: 500;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #005bb5; /* ホバー時に色を濃く */
+  }
+
+  &.active {
+    font-weight: bold; /* 現在のページを強調 */
+    color: #ff4500; /* 赤色で現在のページを目立たせる */
+  }
+}

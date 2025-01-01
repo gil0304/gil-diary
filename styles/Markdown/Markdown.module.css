@@ -1,0 +1,17 @@
+@charset "UTF-8";
+.content {
+  flex: 1;
+  margin-left: 20%; /* ナビゲーションの幅分スペースを確保 */
+  padding: 40px;
+  background-color: #ffffff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+.content h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+.content p {
+  line-height: 1.6;
+  font-size: 16px;
+  color: #333;
+}/*# sourceMappingURL=Markdown.module.css.map */
