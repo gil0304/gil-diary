@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Styles from "@/styles/Navigation/Navigation.module.css";
 
 type Article = { title: string; slug: string; genre: string };
 type NavigationProps = {
@@ -22,20 +23,24 @@ const Navigation = ({ articles }: NavigationProps) => {
   );
 
   return (
-    <nav>
-      <ul>
+    <nav className={Styles.nav}>
+      <ul className={Styles["nav-list"]}>
+        <h2>
+          <Link href="/">ぎる日記</Link>
+        </h2>
         {Object.entries(groupedArticles).map(([genre, articles]) => (
-          <li key={genre}>
-            <h3>{genre}</h3>
-            <ul>
+          <li key={genre} className={Styles["nav-genre"]}>
+            <h3 className={Styles["nav-genre-title"]}>{genre}</h3>
+            <ul className={Styles["nav-sublist"]}>
               {articles.map(({ title, slug }) => (
-                <li key={slug}>
-                  <Link href={`/article/${slug}`}>
-                    <span
-                      style={{ color: currentSlug === slug ? "red" : "blue" }}
-                    >
-                      {title}
-                    </span>
+                <li key={slug} className={Styles["nav-sublist-item"]}>
+                  <Link
+                    href={`/article/${slug}`}
+                    className={`${Styles["nav-link"]} ${
+                      currentSlug === slug ? Styles.active : ""
+                    }`}
+                  >
+                    {title}
                   </Link>
                 </li>
               ))}

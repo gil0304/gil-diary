@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import HomeStyles from "@/styles/Home.module.css";
+import HomeStyles from "@/styles/Home/Home.module.css";
 
 type Article = { title: string; slug: string; genre: string };
 

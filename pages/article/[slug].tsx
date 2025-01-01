@@ -5,6 +5,7 @@ import { remark } from "remark";
 import html from "remark-html";
 import matter from "gray-matter";
 import Navigation from "@/pages/article/navigation";
+import MarkdownStyles from "@/styles/Markdown/Markdown.module.css";
 
 const ArticlePage = ({
   content,
@@ -14,8 +15,13 @@ const ArticlePage = ({
   articles: { title: string; slug: string; genre: string }[];
 }) => (
   <div>
-    <Navigation articles={articles} />
-    <div dangerouslySetInnerHTML={{ __html: content }} />
+    <div>
+      <Navigation articles={articles} />
+    </div>
+    <div
+      className={MarkdownStyles.content}
+      dangerouslySetInnerHTML={{ __html: content }}
+    />
   </div>
 );
 
